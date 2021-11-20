@@ -1,3 +1,29 @@
+### Pulling Docker Image
+
+- Now all `-data` images are full pre-initialized (with available data from the build time)
+
+> Pre Initialized (-data) images, have a web ui password: `adminpassword` and should be changed after the deployment. Also the Postgres got a default password: `none`
+
+### Github Registry
+
+```
+docker pull ghcr.io/secure-compliance-solutions-llc/gvm-docker:debian-master-data-full
+docker pull ghcr.io/secure-compliance-solutions-llc/gvm-docker:debian-master-data
+docker pull ghcr.io/secure-compliance-solutions-llc/gvm-docker:debian-master-full
+docker pull ghcr.io/secure-compliance-solutions-llc/gvm-docker:debian-master
+```
+
+
+### Docker Hub
+
+```
+docker pull securecompliance/gvm:debian-master-data-full
+docker pull securecompliance/gvm:debian-master-data
+docker pull securecompliance/gvm:debian-master-full
+docker pull securecompliance/gvm:debian-master
+```
+
+
 ### Deploying Distributed Greenbone GVM GSA with openvas
 
 Depending on your hardware, it can take anywhere from a few seconds to 10+ minutes while the NVTs are scanned and the database is rebuilt. The default admin user account is created after this process has completed. If you are unable to access the web interface, it means it is still loading (be patient).
