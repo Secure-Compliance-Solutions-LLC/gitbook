@@ -27,6 +27,11 @@ With Image TAG after `21.4.0-v5`
    docker run --detach --volume ./storage/openvas-plugins:/var/lib/openvas/plugins --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222 --name scanner securecompliance/openvas
    ```
 
+Persistent Folder with ssh data with Image TAG after `21.4.0-v5`
+```
+docker run --detach --volume ./storage/openvas-plugins:/var/lib/openvas/plugins ./storage/gvm:/var/lib/gvm --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222 --name scanner securecompliance/openvas
+```
+
    Note: Refer to your GVM deployment to determine your MASTER_ADDRESS and MASTER_PORT values.
 
 3. Watch the scanner logs for the \"Scanner id\" and Public key
