@@ -29,10 +29,10 @@ Steps to deploy remote scanner:
 
 **Persistent Folder with ssh data with Image TAG after `21.4.0-v5`**
 ```
-docker run --detach  \
-   --volume ./storage/openvas-plugins:/var/lib/openvas/plugins ./storage/gvm:/var/lib/gvm  \
-   --env MASTER_ADDRESS={IP or Hostname of GVM container} \ 
-   --env MASTER_PORT=2222  \
+docker run \
+   --detach  --volume ./storage/openvas-plugins:/var/lib/openvas/plugins \
+   --detach  --volume ./storage/gvm:/var/lib/gvm  \
+   --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222  \
    --name scanner securecompliance/openvas
 ```
 
