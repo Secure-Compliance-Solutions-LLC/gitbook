@@ -17,17 +17,17 @@ Steps to deploy remote scanner:
 
 2. Deploy the scanner container on the remote host
 
-Before and equal Image TAG `21.4.0-v5`
+**Before and equal Image TAG `21.4.0-v5`**
    ```shell
    docker run --detach --volume scanner:/data --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222 --name scanner securecompliance/openvas
    ```
 
-With Image TAG after `21.4.0-v5`
+**With Image TAG after `21.4.0-v5`**
    ```shell
    docker run --detach --volume ./storage/openvas-plugins:/var/lib/openvas/plugins --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222 --name scanner securecompliance/openvas
    ```
 
-Persistent Folder with ssh data with Image TAG after `21.4.0-v5`
+**Persistent Folder with ssh data with Image TAG after `21.4.0-v5`**
 ```
 docker run --detach --volume ./storage/openvas-plugins:/var/lib/openvas/plugins ./storage/gvm:/var/lib/gvm --env MASTER_ADDRESS={IP or Hostname of GVM container} --env MASTER_PORT=2222 --name scanner securecompliance/openvas
 ```
