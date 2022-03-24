@@ -53,7 +53,7 @@ With Image TAG after `21.4.0-v5`
 
    Scanner Name: **This can be anything you want**
    Scanner ID: **generated id from remote openvas scanner**
-   Scanner public key: **private key from scanner**
+   Scanner public key: **public key from scanner**
 
    You will receive a confirmation that the scanner has been added
 
