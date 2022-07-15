@@ -6,10 +6,11 @@ After starting the remote scanner, you will find the scanner\'s Public Key and t
 
 ##### The following are variables that can be set/modified using the `--env` option
 
-| Name           | Description                            | Default Value      |
-| -------------- | -------------------------------------- | ------------------ |
-| MASTER_ADDRESS | IP or Hostname of the GVM container    | (No default value) |
-| MASTER_PORT    | SSH server port from the GVM container | 22                 |
+| Name           | Description                                                             | Default Value      |
+| -------------- | ----------------------------------------------------------------------- | ------------------ |
+| MASTER_ADDRESS | IP or Hostname of the GVM container                                     | (No default value) |
+| MASTER_PORT    | SSH server port from the GVM container                                  | 22                 |
+| RSYNC_PROXY    | Optional Rsync proxy. Use 127.0.0.1:3128 to use GVM-Docker Squid proxy  | (No default value) |
 
 Steps to deploy remote scanner:
 
